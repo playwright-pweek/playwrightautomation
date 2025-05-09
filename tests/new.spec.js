@@ -7,7 +7,9 @@ test('has title', async ({ page }) => {
 
     // await page.getByRole('button', { name: 'Sign in' }).waitFor({ state: 'visible' });
     await page.getByRole('button', { name: 'Sign in', exact: true }).click();
-    await page.waitForTimeout(30000);
+    await page.waitForTimeout(10000);
+
+    await page.getByText('Edit', { exact: true }).click();
     //await page.locator('text=Sign In').click
 
     // Expect a title "to contain" a substring.

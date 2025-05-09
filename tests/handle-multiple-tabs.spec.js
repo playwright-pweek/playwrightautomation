@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-const { login } = require("./manager-site-login.spec.js");
+const { login } = require("../tests/manager-login.spec.js"); // Import the login function from the other file
 const extendTimeout = { timeout: 60000 };
 
 test("working with multiple tabs", async ({ browser }) => {
